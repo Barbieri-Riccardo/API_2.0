@@ -1,0 +1,11 @@
+<br><input type="text" #query><br> 
+<button class="btn btn-primary" (click)="submit(query)">Search</button>
+
+<div *ngIf="results">
+    <div *ngFor = "let t of results">
+        ID: {{t.pagination.last_visible_page}} <br>
+    <a [routerLink]="['/item-manga', t.data[0].mal_id]">{{t.data[0].mal_id}}</a> 
+    </div>
+    
+    
+</div>
